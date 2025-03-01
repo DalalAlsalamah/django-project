@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-{% extends "layouts/base.html" %}
+<html lang="en">
+  {% extends "layouts/base.html" %}
  
 {% load static %}
  
@@ -19,31 +20,23 @@
   <p>This is some other text.</p>
 {% endblock content %}
 
-<html lang="en">
   {% load static %}
 <head>
-  <title>Home</title>
+  <title>Book Details</title>
   <meta charset="UTF-8">
   <link rel="icon" href="{% static 'qu-icon.png' %}">
   <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
-  <div class="topnav">
-    <a class="active" href="{% url 'bookmodule.index' %}">Home</a>
-    <a href="{% url 'bookmodule.list_books' %}">List Books</a>
-    <a href="{% url 'bookmodule.aboutus' %}">About</a>
-  </div>
-  <h1>This is heading 1 (Library)</h1>
-  <p>This is a paragraph text </p>
-  <a href="https://www.w3schools.com/html/default.asp">Learn more about HTML</a>
-  <hr>
-  <!-- This is a comment in HTML, not render in the browser -->
-  <h1 style="color: blue;">This is heading 1 (Library)</h1> <!-- add inline css -->
-  <p style="color: white;background-color: black;">This is a paragraph text </p> <!-- add inline css -->
 
-  
-  <h2>This is heading 2</h2>
-  <p>This is some other text.</p>
+  <a href="{% url 'bookmodule.list_books' %}">Go Back</a>
+
+  <h1>Details of Book1</h1>
+  <h2>Internet & World Wide Web How to Program</h2>
+  <h2>Author: author name</h2>
+  <p><strong> Internet & World Wide Web How to Program, 5/e </strong> provides a clear, simple, engaging and entertaining introduction to Internet and web programming. It’s appropriate for both introductory and intermediate-level client-side and server-side programming courses.</p>
+
+  <img src="{% static 'book1.jpg' %}" alt="Book Image" width="200" height="200">
 
 </body>
 </html>
