@@ -11,5 +11,6 @@ urlpatterns = [
 path('formatting/', views.formatting, name="bookmodule.formatting"), 
 path('listing/', views.listing, name="bookmodule.listing"), 
 path('tables/', views.tables, name="bookmodule.tables"), 
-
+path('search/', views.search, name="bookmodule.search"), 
+ 
 ]
