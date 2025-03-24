@@ -12,5 +12,6 @@ path('formatting/', views.formatting, name="bookmodule.formatting"),
 path('listing/', views.listing, name="bookmodule.listing"), 
 path('tables/', views.tables, name="bookmodule.tables"), 
 path('search/', views.search, name="bookmodule.search"), 
- 
+ path('simple/query', views.search, name="simple_query"), 
+ path('complex/query', views.search, name="complex_query"), 
 ]

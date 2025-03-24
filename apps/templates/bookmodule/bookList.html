@@ -7,9 +7,16 @@
 {% if books %}
     <ul>
         {% for book in books %}
-            <li><strong>{{ book.title }}</strong> - {{ book.author }}</li>
+            <li><strong>{{ book.title }}</strong> — {{ book.author }}</li>
         {% endfor %}
     </ul>
+
+    <hr>
+
+    {% for obj in books %}
+        ID: {{ obj.id }}, Title: {{ obj.title }}
+        <hr>
+    {% endfor %}
 {% else %}
     <p>No books found matching your search criteria.</p>
 {% endif %}
