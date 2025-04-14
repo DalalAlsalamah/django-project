@@ -1,0 +1,15 @@
+{% extends "layouts/base.html" %}
+{% block title %} Search Results {% endblock title %}
+
+{% block content %}
+<h2>Books</h2>
+<h1>Books with Editions ≤ 3 and Title/Author not Containing "co"</h1>
+
+<ul>
+    {% for book in books %}
+        <li>{{ book.title }} by {{ book.authors }} - ${{ book.price }} (Edition: {{ book.edition }})</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'bookmodule.search' %}">Back to Search</a>
+{% endblock content %}

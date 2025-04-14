@@ -44,8 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.bookmodule',  # أضف هذا السطر
-    'apps.usermodule',   # أضف هذا السطر
+    'apps.bookmodule',  
+    'apps.usermodule',
+    'apps',  
 ]
 
 

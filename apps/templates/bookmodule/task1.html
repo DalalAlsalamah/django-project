@@ -2,17 +2,20 @@
 {% block title %} Search Results {% endblock title %}
 
 {% block content %}
-<h2>Search Results</h2>
 
-{% if books %}
+    <title>Books Under 80</title>
+</head>
+<body>
+    <h1>Books with Price ≤ 80</h1>
     <ul>
         {% for book in books %}
-            <li><strong>{{ book.title }}</strong> - {{ book.authors }}</li>
+            <li>{{ book.title }} - {{ book.price }}</li>
+        {% empty %}
+            <li>No books found.</li>
         {% endfor %}
     </ul>
-{% else %}
-    <p>No books found matching your search criteria.</p>
-{% endif %}
+
+
 
 <a href="{% url 'bookmodule.search' %}">Back to Search</a>
 {% endblock content %}

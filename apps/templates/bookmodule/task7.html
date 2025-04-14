@@ -1,0 +1,15 @@
+
+{% extends "layouts/base.html" %}
+{% block title %} Search Results {% endblock title %}
+
+{% block content %}
+<h2>Students Per City</h2>
+<ul>
+    {% for city in city_stats %}
+        <li>{{ city.city }}: {{ city.student_count }} student(s)</li>
+    {% endfor %}
+</ul>
+
+
+<a href="{% url 'bookmodule.search' %}">Back to Search</a>
+{% endblock content %}
