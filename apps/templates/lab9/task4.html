@@ -1,0 +1,11 @@
+{% extends "layouts/base.html" %}
+{% block title %} Departments with More Than Two Students {% endblock %}
+
+{% block content %}
+<h2>Departments with More Than Two Students</h2>
+<ul>
+    {% for dept in departments %}
+        <li>{{ dept.name }}: {{ dept.student_count }} students</li>
+    {% endfor %}
+</ul>
+{% endblock %}

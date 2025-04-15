@@ -1,4 +1,5 @@
-from django.urls import path
+from django.urls import path 
+from django.urls import include
 from . import views
 from . import apps
 
@@ -18,4 +19,5 @@ urlpatterns = [
     path('task4/', views.task4_view),
     path('task5/', views.task5_view),
     path('task7/', views.task7_view),
+   
 ]

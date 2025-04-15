@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.bookmodule',  
     'apps.usermodule',
-    'apps',  
+    'apps.lab9',
+
 ]
 
 

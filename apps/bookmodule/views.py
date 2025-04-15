@@ -89,7 +89,7 @@ from django.db.models import Count
 from .models import Address
 
 def task7_view(request):
-    # استخدام annotate لحساب عدد الطلاب في كل مدينة
+  
     city_stats = Address.objects.annotate(student_count=Count('student'))
     
     return render(request, 'bookmodule/task7.html', {'city_stats': city_stats})

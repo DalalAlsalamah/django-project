@@ -20,11 +20,11 @@ from django.urls import path
 import apps.bookmodule.views 
 
 
+from django.contrib import admin
+from django.urls import path, include
 
-from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('books/', include("apps.bookmodule.urls")), #include urls.py of bookmodule app
-    path('users/', include("apps.usermodule.urls"))  #include urls.py of usermodule app
+    path('lab9/', include(('apps.lab9.urls', 'lab9'), namespace='lab9')),  # ← هذا لازم يشير للمجلد lab9 مباشرة
 ]
- 
+
