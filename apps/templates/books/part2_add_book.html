@@ -1,0 +1,6 @@
+<h2>{% if form.instance.pk %}Edit{% else %}Add{% endif %} Book (with Form)</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="{% if form.instance.pk %}Update{% else %}Add{% endif %} Book">
+</form>

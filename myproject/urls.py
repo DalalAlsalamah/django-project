@@ -25,6 +25,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('lab9/', include(('apps.lab9.urls', 'lab9'), namespace='lab9')),  # ← هذا لازم يشير للمجلد lab9 مباشرة
+    path('books/', include(('apps.books.urls', 'books'), namespace='books')),  # ← هذا لازم يشير للمجلد lab9 مباشرة
 ]
 
