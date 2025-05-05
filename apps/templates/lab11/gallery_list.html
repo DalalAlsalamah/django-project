@@ -1,0 +1,10 @@
+<h1>Gallery</h1>
+<a href="{% url 'gallery_add' %}">Add Image</a>
+<ul>
+{% for gallery in galleries %}
+    <li>
+        {{ gallery.title }}<br>
+        <img src="{{ gallery.image.url }}" width="200">
+    </li>
+{% endfor %}
+</ul>

@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'apps.usermodule',
     'apps.lab9',
     'apps.books',
+    'apps.lab11',
+
 
 ]
 
@@ -139,3 +141,7 @@ if DEBUG:
     import mimetypes
     mimetypes.add_type("text/css", ".css", True)
     mimetypes.add_type("application/javascript", ".js", True)
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'

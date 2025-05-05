@@ -1,0 +1,12 @@
+<h1>جميع الصور</h1>
+
+{% for img in images %}
+    <div>
+        <p>{{ img.student.name }}</p>
+        <img src="{{ img.image.url }}" width="200px">
+    </div>
+{% empty %}
+    <p>لا توجد صور مرفوعة بعد.</p>
+{% endfor %}
+
+<a href="{% url 'upload_image' %}">رفع صورة جديدة</a>

@@ -1,0 +1,13 @@
+<h1>Students</h1>
+<a href="{% url 'student_add' %}">Add Student</a>
+<ul>
+{% for student in students %}
+    <li>{{ student.name }} - {{ student.email }}
+        <a href="{% url 'student_update' student.id %}">Edit</a>
+        <form method="post" action="{% url 'student_delete' student.id %}" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+{% endfor %}
+</ul>

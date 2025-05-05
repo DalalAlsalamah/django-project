@@ -1,0 +1,7 @@
+<h1>Students 2 (ManyToMany)</h1>
+<a href="{% url 'student2_add' %}">Add Student2</a>
+<ul>
+{% for student in students %}
+    <li>{{ student.name }} - {{ student.email }}</li>
+{% endfor %}
+</ul>
