@@ -15,12 +15,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATE_DIR = os.path.join(BASE_DIR, "apps" + os.sep + "templates")
-TEMPLATES = [{
 
-'DIRS': [TEMPLATE_DIR],
-
-}]
 
 
 # Quick-start development settings - unsuitable for production
@@ -49,10 +44,10 @@ INSTALLED_APPS = [
     'apps.lab9',
     'apps.books',
     'apps.lab11',
+    'apps.users',
 
 
 ]
-
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -63,6 +58,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
 
 ROOT_URLCONF = "myproject.urls"
 
@@ -145,3 +141,20 @@ if DEBUG:
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+
+
+
+# settings.py
+
+LOGIN_REDIRECT_URL = '/'  # أو أي صفحة بعد تسجيل الدخول
+LOGOUT_REDIRECT_URL = '/users/login/'
+# settings.py
+
+LOGIN_URL = 'apps/users/login/'  # تأكد من أنها تشير إلى عنوان صفحة تسجيل الدخول
+
+# للرسائل:
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}

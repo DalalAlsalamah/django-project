@@ -28,8 +28,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.lab11.urls')),  # ربط تطبيق lab11 مع مسار صحيح
-]
-
+  path('users/', include('apps.users.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
